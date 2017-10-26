@@ -1,10 +1,9 @@
 <div class="top-bar">
     <div class="top-bar-title">GGC Admin Area</div>
-
-    <div class="top-bar-left">
+        
+    <div *ngIf="theUser" class="tob-bar-left">
         <ul class="menu">
-            <li class="admin-menu"><a href="#">One</a></li>
-            <li class="admin-menu"><a href="#">Two</a></li>
+            <li class="admin-menu"><a [routerLink]="['/admin/blog-admin']">Manage Blogs</a></li>
         </ul>
     </div>
 
@@ -14,4 +13,14 @@
             <li class="admin-menu"><a>{{theUser}} Logged In</a></li>
         </ul>
     </div>
+
+
+</div>
+
+<div class="row">
+    <img src="../adminShared/images/code.jpg">
+</div>
+<div class="row align-center">
+    <h2>Welcome to the admin Area</h2>
+    <h2>This area is for authorzied users only</h2>   
 </div>
