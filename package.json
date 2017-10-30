@@ -16,6 +16,7 @@
     "@angular/platform-browser": "~4.3.4",
     "@angular/platform-browser-dynamic": "~4.3.4",
     "@angular/router": "~4.3.4",
+    "chrome-debug": "^1.0.0",
     "core-js": "^2.5.0",
     "firebase": "^4.6.0",
     "foundation-sites": "^6.4.2",
