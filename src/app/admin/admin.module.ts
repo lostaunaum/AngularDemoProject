@@ -12,6 +12,8 @@ import { UserService } from './adminShared/user.service';
 import { BlogAdminService } from './adminShared/blog-admin.service';
 import { BlogAdminComponent } from './blogAdmin/blog-admin.component';
 import { BlogAddComponent } from './blogAdd/blog-add.component';
+import { ProductAdminService } from './adminShared/product-admin.service';
+
 
 import {TruncatePipe} from './adminShared/trunc.pipe'
 
@@ -49,7 +51,8 @@ const AdminRoutes: Routes = [
     ],
     providers : [
         UserService,
-        BlogAdminService
+        BlogAdminService,
+        ProductAdminService
     ]
 })
 export class AdminModule {}
