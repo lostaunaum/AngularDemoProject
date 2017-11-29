@@ -36,15 +36,16 @@ export class ProductAdminService{
         alert('PRODUCT UPDATED');
     }
 
-    removeProduct(deleteProduct: Product){
-        let dbRef = firebase.database().ref('products/').child(deleteProduct.id).remove();
+    //need to change this to deleteProduct once that method is created 
+    removeProduct(deletePost: Product){
+        let dbRef = firebase.database().ref('products/').child(deletePost.id).remove();
         alert('product deleted');
-        let imageRef = firebase.storage().ref().child(`product_images/${deleteProduct.imgTitle}`)
+        let imageRef = firebase.storage().ref().child(`product_images/${deletePost.imgTitle}`)
             .delete()
                 .then(function() {
-                    alert(`${deleteProduct.imgTitle} was deleted from storage`);
+                    alert(`${deletePost.imgTitle} was deleted from storage`);
                 }).catch(function(error) {
-                    alert(`Error - Unable to delete ${deleteProduct.imgTitle}`);
+                    alert(`Error - Unable to delete ${deletePost.imgTitle}`);
                 });
     }
 }
